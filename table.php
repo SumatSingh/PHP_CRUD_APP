@@ -7,8 +7,7 @@ include 'db.php';
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employees Data</title>
     <style>
         * {
@@ -35,17 +34,18 @@ include 'db.php';
             /* justify-content: center; */
         }
 
-        .table_data_div{
+        .table_data_div {
             display: flex;
             gap: 20px;
             align-items: center;
             margin-top: 20px;
         }
-        .table_data_div a{
+
+        .table_data_div a {
             font-size: 20px;
         }
 
-        table{
+        table {
             width: 600px;
             height: 400px;
             margin-top: 10px;
@@ -53,12 +53,12 @@ include 'db.php';
             /* background-color: blue; */
             /* border: 5px double yellow; */
         }
+
         th,
         td {
             border: 2px dotted black;
             padding: 10px;
         }
-       
     </style>
 </head>
 
@@ -106,7 +106,7 @@ include 'db.php';
                                 <td>
                                     <a href="delete.php?delete=<?php echo $row['id'] ?>"
                                         onclick="return confirm('Are you sure you want to delete this data?')">Delete</a>
-                                    <a href="update.php?edit=<?php echo $num ?>">Edit</a>
+                                    <a href="update.php?edit=<?php echo $row['id'] ?>">Edit</a>
                                 </td>
                             </tr>
 
